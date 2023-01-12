@@ -1,0 +1,15 @@
+version 2 : 
+
+sources:
+ - name : postgres
+   database : raw 
+   schema: public
+   tables:
+     #Generate model
+     - name : orders
+     #Generate model
+     - name : orders_items
+     #Generate model
+     - name : adresses
+
+       
