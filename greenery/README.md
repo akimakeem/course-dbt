@@ -37,6 +37,28 @@ select avg(days) from (
 - Average of 3.89 or ~4 days for an order being placed to be  delivered.
 
 
+## 4) How many users have only made one purchase? Two purchases? Three+ purchases?
+```
+  with purchases as (
+        select 
+        user_guid as users
+        , count( distinct order_guid )    as orders
+    from DEV_DB.DBT_ORLERYINKERGMAILCOM.STG_POSTGRES__ORDERS 
+    group by 1
+    )
+    select
+        case when orders = 1 then '1 Purchase'
+            when orders = 2 then '2 Purchases'
+            when orders > 2 then '3 or more Purchases'
+        end                             as no_of_purchases
+        , count(users) as user_Count
+    from purchases
+    group by 1
+    order by 1;
+```
+
+- 25 users made just one purchase , 28 users with 2 purchase and 71 users with 3 or more purchase
+
 
 ## 5) On average, how many unique sessions do we have per hour ?
 ```
