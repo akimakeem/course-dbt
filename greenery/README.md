@@ -13,10 +13,14 @@
 
 ## 2) On average, how many orders do we receive per hour?
 ```
-
+    select 
+        count(distinct order_guid) -- order_count  
+      / datediff(hour, min(created_at_utc), max(created_at_utc)) --- total hours
+    from 
+      DEV_DB.DBT_ORLERYINKERGMAILCOM.STG_POSTGRES__ORDERS
 ```
 
-- Average of  orders per hour.
+- Average of 7.68 orders per hour.
 
 
 ## 3) On average, how long does an order take from being placed to being delivered?
