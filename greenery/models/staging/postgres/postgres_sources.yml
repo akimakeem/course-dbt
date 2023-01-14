@@ -1,5 +1,4 @@
-version 2 : 
-
+version  : 2 
 sources:
  - name : postgres
    database : raw 
@@ -8,8 +7,12 @@ sources:
      #Generate model
      - name : orders
      #Generate model
-     - name : orders_items
+     - name : order_items
      #Generate model
-     - name : adresses
+     - name : addresses
+     - name : events
+     - name : products
+     - name : promos
+     - name : users
 
        
