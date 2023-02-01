@@ -73,5 +73,15 @@ FROM
 - Average of unique sessions per hour is 10.14.
 
 
+# Week 3 SQL Project Solutions:
 
+## 1) What is our overall conversion rate ? 
+```
+   select 
+         div0(sum(checkout), count(distinct session_id)) as conversion_rate
+   from 
+        DEV_DB.DBT_ORLERYINKERGMAILCOM.INT_SESSION_EVENTS_AGG;
+```
+
+ - 0.62
 
