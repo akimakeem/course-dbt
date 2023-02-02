@@ -75,7 +75,7 @@ FROM
 
 # Week 3 SQL Project Solutions:
 
-## 1) What is our overall conversion rate ? 
+##  What is our overall conversion rate ? 
 ```
    select 
          div0(sum(checkout), count(distinct session_id)) as conversion_rate
@@ -85,7 +85,7 @@ FROM
 
  - 0.62
 
-## 5) What orders changed between week 2 to week 3 ? 
+##  What orders changed between week 2 to week 3 ? 
 ```
    select 
       order_id
