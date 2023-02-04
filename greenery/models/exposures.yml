@@ -1,0 +1,14 @@
+version: 2
+
+exposures:  
+  - name: Product Funnel Report
+    description: |
+      Product funnel shows how users are moving through product funnel
+    type: dashboard
+    url: https://app.sigmacomputing.com/corise-dbt/b/FACT_PRODUCT_FUNNEL-70xnB1zshQd5Fgf7f3MtAF
+    maturity: high
+    owner:
+      name: Akeem Amure
+      email: mail@akeem.com
+    depends_on:
+      - ref('fact_product_funnel')
