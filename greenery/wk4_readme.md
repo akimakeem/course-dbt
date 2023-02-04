@@ -12,3 +12,10 @@ dbt_valid_from::date >= '2023-02-01'
 
  - 6 orders 
 
+
+##  How are users moving through product funnel
+```
+
+```
+
+ - 
