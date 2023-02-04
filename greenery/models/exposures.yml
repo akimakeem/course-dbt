@@ -3,7 +3,7 @@ version: 2
 exposures:  
   - name: Product Funnel Report
     description: |
-      Product funnel shows how users are moving through product funnel
+      Product funnel shows how users are moving through product funnel from page view 
     type: dashboard
     url: https://app.sigmacomputing.com/corise-dbt/b/FACT_PRODUCT_FUNNEL-70xnB1zshQd5Fgf7f3MtAF
     maturity: high
