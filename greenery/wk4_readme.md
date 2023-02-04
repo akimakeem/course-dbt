@@ -31,4 +31,13 @@ dbt_valid_from::date >= '2023-02-01'
 Developed a fact_product_funnel model, this contains granular details of 
         - users, products, session, and the three categories of the funnel listed above 
 ```
- - 
+ SELECT 
+      product_id, product_name,
+      sum(add_to_cart) as add_to_carts,
+      sum(checkout) as checkouts,
+      sum(page_view) as page_views
+      
+FROM 
+     DEV_DB.DBT_ORLERYINKERGMAILCOM.fact_product_funnel
+group by product_id, product_name
+```
