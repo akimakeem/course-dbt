@@ -8,7 +8,8 @@ with session_events as (
 
 , final  AS(   
     SELECT
-     product_id as product_guid
+     a.product_id as product_guid,
+     name as product_name
      ,session_id
     , sum(case when event_type = 'add_to_cart' then 1 else 0 end) as add_to_carts
     , sum(case when event_type = 'checkout' then 1 else 0 end) as checkouts
@@ -18,10 +19,9 @@ with session_events as (
     , max(created_at) as last_session_event_at_utc
     
 FROM 
-    session_events
---where product_id is NOT NULL
-
-GROUP BY 1,2
+    session_events a
+inner JOIN {{ ref('dim_products') }} b on a.product_id = b.product_id
+GROUP BY 1,2,3
 )
 
 SELECT * FROM final
