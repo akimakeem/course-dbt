@@ -19,8 +19,14 @@ dbt_valid_from::date >= '2023-02-01'
 
 
 ##  How are users moving through product funnel
-```
 
-```
+    ### Product funnel is defined with 3 levels for our dataset:
 
+         - Sessions with any event of type page_view
+
+         - Sessions with any event of type add_to_cart
+
+         - Sessions with any event of type checkout
+```
+```
  - 
