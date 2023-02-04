@@ -28,5 +28,6 @@ dbt_valid_from::date >= '2023-02-01'
 
          - Sessions with any event of type checkout
 ```
+Developed a fact_product_funnel model, this contains granular details of users, products, session, and the three categories of the funnel listed above 
 ```
  - 
